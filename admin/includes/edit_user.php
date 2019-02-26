@@ -69,9 +69,8 @@
 
         $update_user_query = mysqli_query($connection, $query);
 
-        if(!$update_user_query){
-            echo "ERROR! ".mysqli_error($connection);
-        };
+        confirmQuery($update_user_query);
+
     }
 
 ?>

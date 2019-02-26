@@ -28,11 +28,11 @@
                         $post_content = substr($row['post_content'],0,150);
                         
                         if($post_status !== "published"){
-                            echo "<h1>NO POST HERE</h1>";
+                            echo "<h1>NO POST HERE!</h1>";
                         } else {
                         
                 ?>
-                     <!-- Blog Post -->
+                     <!-- Blog Post  -->
                 <h2>
                    <a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?></a>
                 </h2>

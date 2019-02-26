@@ -1,4 +1,5 @@
- <?php include "db.php";?>   
+ <?php include "db.php";?>
+ <?php session_start(); ?>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -27,7 +28,13 @@
                     
                 ?>
                     <li>
-                        <a href="http://localhost/cms/admin/">Admin</a>
+                        <a href="<?php
+                        if(isset($_SESSION['user_role']) == 'admin') {
+                            echo "./admin";
+                        } else {
+                            echo "#";
+                        }
+                        ?>">Admin</a>
                     </li>
                 </ul>
             </div>
